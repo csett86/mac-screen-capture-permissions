@@ -5,7 +5,7 @@
 ## Install
 
 ```
-$ npm install mac-screen-capture-permissions
+$ npm install --save-optional github:csett86/mac-screen-capture-permissions
 ```
 
 ## Usage
