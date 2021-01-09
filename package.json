@@ -3,7 +3,7 @@
   "version": "1.2.2",
   "description": "Check and request permission to capture the screen",
   "main": "index.js",
-  "repository": "https://github.com/karaggeorge/mac-screen-capture-permissions",
+  "repository": "https://github.com/csett86/mac-screen-capture-permissions",
   "author": {
     "name": "George Karagkiaouris",
     "email": "gkaragkiaouris2@gmail.com",
