@@ -78,6 +78,14 @@ Only available in Electron apps.
 
 Returns a Promise that resolves when the window is opened
 
+## Prebuilds
+
+Election prebuilds are automated via github actions. Node prebuilds or other postbuilds can be added after a release via
+
+```
+npx prebuild -t 12.0.0 -t 14.0.0 -t 15.0.0 -r node --arch x64
+```
+
 ## License
 
 MIT
