@@ -4,6 +4,7 @@ const fs = require('fs');
 const execa = require('execa');
 const {isElectron} = require('electron-util/node');
 const macosVersion = require('macos-version');
+
 const permissionExists = macosVersion.isGreaterThanOrEqualTo('10.15');
 
 let filePath;
@@ -61,7 +62,7 @@ exports.resetPermissions = ({bundleId = ''} = {}) => {
 		}
 
 		return true;
-	} catch (error) {
+	} catch {
 		return false;
 	}
 };
