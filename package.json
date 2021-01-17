@@ -24,7 +24,7 @@
     "prebuild-install": "^6.0.0"
   },
   "devDependencies": {
-    "electron": "^7.1.0",
+    "electron": "^9.4.1",
     "prebuild": "^10.0.1",
     "tsd": "^0.14.0",
     "xo": "^0.37.1"
