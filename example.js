@@ -5,13 +5,18 @@ const {
 	openSystemPreferences
 } = require('.');
 
-(async () => {
-	await app.whenReady();
-
+function checkForPermissions() {
 	console.log('Has asked permissions?', hasPromptedForPermission());
 
 	console.log('Has permissions?', hasScreenCapturePermission());
 	console.log('Has asked permissions?', hasPromptedForPermission());
+	console.log('Sleep for 3 seconds...')
 
-	openSystemPreferences();
+	setTimeout(checkForPermissions, 3000);
+}
+
+(async () => {
+	await app.whenReady();
+
+	checkForPermissions();
 })();
