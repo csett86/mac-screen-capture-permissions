@@ -17,4 +17,4 @@ jobs:
         node-version: 14.x
     - run: npx prebuild -t 9.4.0 -t 10.2.0 -t 11.1.1 -r electron --arch x64 -u ${{ secrets.GITHUB_TOKEN }}
       env:
-        SDKROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
+        SDKROOT: /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk

@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import <CoreGraphics/CoreGraphics.h>
 #include <node_api.h>
 
 static napi_value hasPermissions(napi_env env, napi_callback_info info) {
