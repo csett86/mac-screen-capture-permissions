@@ -1,6 +1,6 @@
 {
   "name": "mac-screen-capture-permissions",
-  "version": "1.2.9",
+  "version": "2.0.0",
   "description": "Check and request permission to capture the screen",
   "main": "index.js",
   "repository": "https://github.com/csett86/mac-screen-capture-permissions",
@@ -18,8 +18,8 @@
     "install": "prebuild-install || node install.js"
   },
   "dependencies": {
-    "electron-util": "^0.14.2",
-    "execa": "^5.0.0",
+    "electron-util": "^0.13.0",
+    "execa": "^2.0.4",
     "macos-version": "^5.2.1",
     "prebuild-install": "^6.0.0"
   },
