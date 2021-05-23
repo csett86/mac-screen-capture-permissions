@@ -7,7 +7,7 @@
 Building the module from source requires macOS 11+ SDK, but the resulting module will still run on <10.15, 10.15 and 11+.
 
 ```
-$ npm install --save-optional github:csett86/mac-screen-capture-permissions
+$ npm install github:csett86/mac-screen-capture-permissions
 ```
 
 ## Usage
