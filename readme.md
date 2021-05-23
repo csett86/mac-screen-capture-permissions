@@ -4,8 +4,6 @@
 
 ## Install
 
-Building the module from source requires macOS 11+ SDK, but the resulting module will still run on <10.15, 10.15 and 11+.
-
 ```
 $ npm install github:csett86/mac-screen-capture-permissions
 ```
@@ -44,7 +42,9 @@ hasScreenCapturePermission();
 
 #### `.hasScreenCapturePermission(): boolean`
 
-Whether or not the current app has the required permissions to record the screen. If this is the first time attempting, a permissions dialog will be shown to the user. Any subsequent calls to `hasScreenCapturePermission` will just check for the permission but won't show a dialog. If the user denied the original request, you need to prompt them to enable the permissions in the System Preferences.
+**Note:** Only works for Electron apps
+
+Whether or not the current app has the required permissions to record the screen. It will not prompt the user to grant the permission. If the user denied the original request, you need to prompt them to enable the permissions in the System Preferences.
 
 This can be reset by calling `resetPermissions`. The dialog will be shown again after that.
 
@@ -66,7 +66,7 @@ Reset the `ScreenCapture` permissions. It will reset the permissions for **all**
 
 Calls `tccutil reset ScreenCapture [bundleId]`.
 
-This will revoke access if it was previously granted, and it will trigger the permissions dialog the next time `hasScreenCapturePermission` is called.
+This will revoke access if it was previously granted.
 
 Returns `true` if the command executed successfully and `false` otherwise.
 
@@ -74,19 +74,11 @@ Returns `false` on macOS versions older than 10.15 since this permission wasn't 
 
 #### `.openSystemPreferences(): Promise<void>`
 
+**Note:** Only works for Electron apps
+
 Open the System Preferences in the Screen Recording permissions section under the Security pane.
 
-Only available in Electron apps.
-
 Returns a Promise that resolves when the window is opened
-
-## Prebuilds
-
-Election prebuilds are automated via github actions. Node prebuilds or other postbuilds can be added after a release via
-
-```
-npx prebuild -t 12.0.0 -t 14.0.0 -t 15.0.0 -r node --arch x64
-```
 
 ## License
 
